@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PhenoMotion</title>
+<style>
+  :root { --ink:#1a1d21; --muted:#5b6269; --faint:#8b9298; --accent:#b07d2b; --bg:#fbfaf8; --line:#e6e2db; }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) { --ink:#e8e6e3; --muted:#a8a29b; --faint:#787570; --accent:#d9a441;
+                                      --bg:#16181a; --line:#2b2f33; }
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.65 -apple-system, BlinkMacSystemFont,
+         "Segoe UI", system-ui, sans-serif; }
+  main { max-width: 42rem; margin: 0 auto; padding: 4rem 16px 6rem; }
+  h1 { font-size: 2rem; line-height:1.2; margin:0 0 .4rem; letter-spacing:-.02em; }
+  .sub { color: var(--muted); margin: 0 0 2.5rem; font-size: 1.05rem; }
+  h2 { font-size: 1.05rem; margin: 2.5rem 0 .6rem; letter-spacing:.02em; text-transform: uppercase;
+       color: var(--accent); font-weight: 700; }
+  p { margin: 0 0 1rem; }
+  ul { margin: 0 0 1rem; padding-left: 1.2rem; }
+  li { margin-bottom: .4rem; }
+  a { color: inherit; text-decoration: underline; text-underline-offset: 2px; text-decoration-color: var(--accent); }
+  footer { border-top:1px solid var(--line); margin-top:3.5rem; padding-top:1.2rem; color:var(--faint);
+           font-size:.9rem; }
+  footer a { margin-right: 1.2rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>PhenoMotion</h1>
+  <p class="sub">Animated summaries of published biology papers — the mechanism, the evidence, and what the
+     authors actually showed.</p>
+
+  <h2>What it is</h2>
+  <p>PhenoMotion turns a single published paper into a short narrated video: a schematic of the mechanism
+     the paper proposes, then each result drawn from the paper's own source data, with its sample size and
+     its statistical test on screen beside it.</p>
+  <p>Every number shown is taken from the published figures or the source-data files that accompany them.
+     Claims are kept to what the figure supports — if something was shown in a dish and not in an animal,
+     the video says so.</p>
+
+  <h2>How the videos are made</h2>
+  <ul>
+    <li>Charts and schematics are drawn programmatically with
+        <a href="https://www.manim.community/">Manim Community Edition</a>, from the paper's data.</li>
+    <li>Narration is a <strong>synthetic voice</strong>. No part of any video is a recording of a person,
+        and each video is disclosed to YouTube as containing synthetic media.</li>
+    <li>Each video names the paper, its DOI and its licence, and links to the original. These summaries are
+        not the work of the papers' authors, and any error in a summary is the summariser's, not theirs.</li>
+  </ul>
+
+  <h2>The uploader</h2>
+  <p>This site also serves as the home page for the small program that publishes these videos to YouTube.
+     It runs on one researcher's own computer, signs in as that same person, and uploads their own videos to
+     their own channel. It has no other users and collects nothing. See the
+     <a href="privacy.html">privacy policy</a> for exactly what it touches.</p>
+
+  <footer>
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+  </footer>
+</main>
+</body>
+</html>
